@@ -5,7 +5,7 @@ Lightweight, no-frills audio player.
 ### Purpose
 Currently, The New Yorker uses a very bloated and inflexible third-party player for our podcasts (and any other audio). Why? I'm not too sure, I guess there is some kind of partnership but nobody has given me a final answer on that.
 
-In the meantime, let's try to make something better. And hey, while we're at it, let's introduce ReactJS to our team?
+In the meantime, let's try to make something better. And hey, while we're at it, let's introduce ReactJS to our codebase.
 
 ### Why it's better
 The WNYC player has several issues:
@@ -49,8 +49,6 @@ A few things need to happen before we get too excited:
 * The next steps are WIP: run `NODE_ENV=production gulp compress-js` and `NODE_ENV=production gulp compress-css` to minify & gzip production-ready files.
 * Upload to S3. Set permissions to public.
 * Manually add `Content-Encoding` mime-types for CSS and JS to `gzip`.
-*
-
 
 
 
