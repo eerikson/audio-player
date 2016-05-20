@@ -47,7 +47,7 @@ A few things need to happen before we get too excited:
 * Start a local server: `sudo gulp server`. Admin priviliges are needed for port 80, feel free to change this.
 * Everything you need is located in `/src`. Run `gulp` to compile these.
 
-#### Deployment (very WIP)
+##### Deployment (very WIP)
 * Run `NODE_ENV=production gulp compress-js` and `NODE_ENV=production gulp compress-css` to minify & gzip production-ready files.
 * Upload to S3. Set permissions to public.
 * Manually add `Content-Encoding` mime-types for CSS and JS to `gzip`.
