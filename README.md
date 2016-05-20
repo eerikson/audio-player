@@ -43,7 +43,7 @@ A few things need to happen before we get too excited:
 * TNY internal code review (shouldn't take longer than 30 minutes)
  
 ### Getting Started
-* After cloning the repo, run `npm install`.
+* After cloning the repo, run `npm install`. Make sure your local version of `node` is up-to-date.
 * Start a local server: `sudo gulp server`. Admin priviliges are needed for port 80, feel free to change this.
 * Everything you need is located in `/src`. Run `gulp` to compile these.
 
