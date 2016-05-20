@@ -1,0 +1,78 @@
+.play-pause-button.component {
+	
+	position: relative;
+	width: $PLAY-PAUSE-BUTTON-RADIUS;
+	height: $PLAY-PAUSE-BUTTON-RADIUS;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0;
+	
+	@include small {
+		
+		width: $PLAY-PAUSE-BUTTON-RADIUS/2;
+		height: $PLAY-PAUSE-BUTTON-RADIUS/2;
+	}
+	
+	// Weird animation stuff.
+	// The triangles mutate back and forth into pause and play shapes.
+	// .left and .right assist in this.
+	.triangle {
+		position: absolute;
+	  top: 0;
+	  right: 0;
+	  background-color: transparent;
+	  width: 0;
+	  height: 0;
+	  border-right: $PLAY-PAUSE-BUTTON-RADIUS solid $PLAYER-BACKGROUND;
+	  border-top: $PLAY-PAUSE-BUTTON-RADIUS/2 solid transparent;
+	  border-bottom: $PLAY-PAUSE-BUTTON-RADIUS/2 solid transparent;
+	  transition: transform 0.3s $easing--fast-start;
+		
+		@include small {
+			border-right: $PLAY-PAUSE-BUTTON-RADIUS/2 solid $PLAYER-BACKGROUND;
+		  border-top: $PLAY-PAUSE-BUTTON-RADIUS/4 solid transparent;
+		  border-bottom: $PLAY-PAUSE-BUTTON-RADIUS/4 solid transparent;
+		}
+		
+	}
+	
+	.triangle.first {
+	  transform: translate3d(0, -100%, 0);
+	}
+	.triangle.second {
+	  transform: translate3d(0, 100%, 0);
+	}
+	
+	.left {
+		height: 100%;
+	  float: left;
+	  background-color: $PLAYER-DARK-FOREGROUND;
+	  width: 36%;
+	  transition: all 0.3s $easing--fast-start;
+	  overflow: hidden;
+	}
+	
+	.right {
+		height: 100%;
+	  float: right;
+	  width: 36%;
+	  background-color: $PLAYER-DARK-FOREGROUND;
+	  transition: all 0.3s $easing--fast-start;
+	}
+	
+	// When paused
+	&:not(.is-playing) {
+		.left {
+	    width: 50%;
+		}
+	  .right {
+	    width: 50%;
+		}
+	  .triangle.first {
+	    transform: translate3d(0, -50%, 0);
+		}
+	  .triangle.second {
+	    transform: translate3d(0, 50%, 0);
+		}
+	}
+}

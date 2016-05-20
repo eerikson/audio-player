@@ -1,0 +1,26 @@
+.timecode.component {
+	font-size: 12px;
+	font-weight: 500;
+	transition: all 0.25s ease;
+	&:not(.is-mounted) {
+		width: 0;
+	}
+	
+	.total.time,
+	.divider {
+		opacity: 0.5;
+	}
+	
+	@include small {
+		font-size: 10px;
+		text-align: left;
+		
+		.divider {
+			display: none;
+		}
+		
+		.time {
+			display: block;
+		}
+	}
+}

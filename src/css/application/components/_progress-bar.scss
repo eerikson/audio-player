@@ -1,0 +1,45 @@
+.progress-bar.component {
+	position: relative;
+	height: 10px;
+	width: 0px;
+	transition: all 0.5s $easing--fast-start;
+	cursor: pointer;
+	margin: 0;
+	// flex: 1;
+	
+	&.is-mounted {
+		width: $PROGRESS-BAR-WIDTH;
+	
+		@include small {
+			width: $PROGRESS-BAR-WIDTH/2;
+		}
+	}
+	
+	.track {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		// transition: all 2s $easing--fast-start;
+		background-color: $PLAYER-LIGHT-FOREGROUND;
+	}
+	
+	.track.full {
+		left: 0;
+		right: 0;
+		background-color: $PLAYER-DARK-FOREGROUND;
+	}
+	
+	.track.buffer {
+		// transform: translate3d(-50%, 0, 0);
+	}
+	
+	.playhead {
+		width: 2px;
+		top: -2px;
+		bottom: -2px;
+		position: absolute;
+		margin-left: -1px;
+		background-color: $PLAYER-DARK-FOREGROUND;
+		transition: left 0.5s $easing--fast-start;
+	}
+}

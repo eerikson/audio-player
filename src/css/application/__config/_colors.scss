@@ -1,0 +1,42 @@
+// Colors
+// Colors below privately defined as hex/rgb, publicly exposed as names.
+// _____________________________________________________________________________
+
+
+$athens-gray--hex:                       #EEF1F2;
+$dark-athens-gray--hex:                  #D0D8DB;
+$fjord--hex:                             #445566;
+$firefly--hex:                           #112233;
+$cyan--hex:                              #00ADEF;
+$delta--hex:                             #9DA298;
+$biscay--hex:                            #334455;
+$carnation--hex:                         #FC575E;
+$light-cyan--hex:                        #BBFFDD;
+$night-rider--hex:                       #333333;
+$gainsboro--hex:                         #E2E2E2;
+
+
+// PUBLIC NAMING
+// Use the below in implementations. This way, we can quickly make global 
+// overrides above.
+// 
+// Convention:
+// COLOR_KEY:                            value--format
+// _____________________________________________________________________________
+
+$COLOR_RED:                              $carnation--hex;
+$COLOR_BLUE-GRAY:                        $athens-gray--hex;
+$COLOR_DARK-BLUE-GRAY:                   $dark-athens-gray--hex;
+$COLOR_DARK-BLUE:                        $fjord--hex;
+$COLOR_DARKER-BLUE:                      $firefly--hex;
+$COLOR_LIGHT-BLUE:                       $cyan--hex;
+$COLOR_GRAY:                             $delta--hex;
+$COLOR_BRIGHT-TEAL:                      $light-cyan--hex;
+$COLOR_ALMOST-BLACK:                     $night-rider--hex;
+$COLOR_LIGHT-GRAY:                       $gainsboro--hex;
+
+// Common colors, for theming
+// _____________________________________________________________________________
+$PLAYER-BACKGROUND:                      $COLOR_LIGHT-GRAY;
+$PLAYER-DARK-FOREGROUND:                 $COLOR_DARK-BLUE;
+$PLAYER-LIGHT-FOREGROUND:                $COLOR_GRAY;

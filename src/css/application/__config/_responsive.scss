@@ -1,0 +1,36 @@
+// Breakpoints
+// _____________________________________________
+$breakpoint-large      : 960px;
+$breakpoint-medium     : 640px;
+
+// Mixins 
+// _____________________________________________
+@mixin large {
+	@media (min-width: $breakpoint-large) {
+		@content;
+	}
+}
+
+@mixin medium-up {
+	@media (min-width: $breakpoint-medium) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large - 1px) {
+		@content;
+	}
+}
+
+@mixin small {
+	@media (max-width: $breakpoint-medium - 1px ) {
+		@content;
+	}
+}
+
+@mixin medium-down {
+	@media (max-width: $breakpoint-large - 1px ) {
+		@content;
+	}
+}

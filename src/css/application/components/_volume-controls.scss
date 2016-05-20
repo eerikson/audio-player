@@ -1,0 +1,50 @@
+.volume-controls.component {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	height: 20px;
+	transition: opacity 0.25s 0.6s linear;
+	
+	&:not(.is-mounted) {
+		opacity: 0;
+		
+		.increment {
+			width: 0px;
+			padding: 0;
+		}
+	}
+	
+	.increment {
+		width: 5px;
+		height: 100%;
+		padding: 0 2px;
+		box-sizing: border-box;
+		transition: all 0.4s 0s ease-out;
+		position: relative;
+		display: block;
+		margin: 0;
+		cursor: pointer;
+		
+		// Pseudo-color fill for better clicking
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 1px;
+			background-color: $PLAYER-DARK-FOREGROUND;
+		}
+		
+		&:hover {
+			height: 175%;
+			margin-top: -18.5%;
+		}
+	}
+	
+	// All increments after target volume should be faded out.
+	.increment.is-current-volume ~ .increment {
+		opacity: 0.5;
+	}
+}

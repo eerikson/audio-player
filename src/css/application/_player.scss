@@ -1,0 +1,50 @@
+//  Player
+//  
+//  Styles relevant to the player & maybe state.
+//  ____________________________________________________________________________
+
+.player {
+	background-color: $PLAYER-BACKGROUND;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 20px;
+	
+	
+	.play-pause-button.component {
+		margin: 0 0 0 0;
+	}
+	
+	.progress-bar.component.is-mounted {
+		margin-left: 30px;
+	}
+	
+	.timecode.component.is-mounted {
+		margin-left: 20px;
+	}
+	
+	.volume-controls.component.is-mounted {
+		margin-left: 20px;
+	}
+	
+	@include small {
+		.progress-bar.component.is-mounted {
+			margin-left: 15px;
+		}
+		
+		.timecode.component.is-mounted {
+			margin-left: 10px;
+		}
+		
+		.volume-controls.component.is-mounted {
+			margin-left: 10px;
+		}
+	}
+	
+	.component:not(.is-mounted):not(.play-pause-button) {
+		opacity: 0;
+	}
+}
