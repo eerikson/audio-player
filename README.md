@@ -1,6 +1,7 @@
 # Audio Player
 Lightweight, no-frills audio player.
 
+Demo [here](https://s3.amazonaws.com/erikson-random/tny/player/index.html).
 
 ### Purpose
 Currently, we use a very heavy and non-configurable third-party player for our podcasts (and any other audio). Why? I'm not too sure, but I think there is a legal reason for it.
