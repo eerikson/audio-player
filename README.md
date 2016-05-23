@@ -8,12 +8,12 @@ Currently, we use a very heavy and non-configurable third-party player for our p
 In the meantime, let's try to make something better. And hey, while we're at it, let's introduce ReactJS to our codebase.
 
 ### Why it's better
-The WNYC player has several issues:
+The current player has several issues:
 
 * We do not own or control any of the code or file hosting—if anything goes wrong here, we're hosed
 * Large page weight for what features are delivered (~250kb)
 * Very large number of requests, which is a killer on mobile (20 requests)
-* Inflexible design sourced from WNYC, not TNY
+* Inflexible design sourced from vendor, not us
 
 This version, still in its infancy, is better because:
 * We own the code
@@ -40,7 +40,7 @@ A few things need to happen before we get too excited:
 * Feature audit—are we missing anything?
 * Legal audit—is it okay that we're doing this?
 * Design audit—can/should we improve anything else while we're at it?
-* TNY internal code review (shouldn't take longer than 30 minutes)
+* Internal code review (shouldn't take longer than 30 minutes)
  
 ### Getting Started
 * After cloning the repo, run `npm install`. Make sure your local version of `node` is up-to-date.
