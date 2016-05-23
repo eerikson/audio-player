@@ -22,7 +22,7 @@ This version, still in its infancy, is better because:
 * Fewer requests (3 requests)
 * We can design anything we want
 
-TNY developers' lives are made easier as well, because this uses:
+Developers' lives are made easier as well, because this uses:
 * NPM
 * Gulp
 * ECMAScript 6 (via Babel)
